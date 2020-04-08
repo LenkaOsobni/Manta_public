@@ -1,0 +1,781 @@
+﻿@model Manta_dev_Data.Aktive_WP
+@{
+    ViewBag.Title = "Edit";
+    Manta_dev_Data.Settings_Name_Columns SettingsList = (Manta_dev_Data.Settings_Name_Columns)ViewData["Name_Column"];
+    Manta_dev_Data.Setting_Group AdminRole = (Manta_dev_Data.Setting_Group)ViewData["Admin"];
+    Manta_dev_Data.Setting_Group EditorRole = (Manta_dev_Data.Setting_Group)ViewData["Editor"];
+    Manta_dev_Data.Setting_Group AllRole = (Manta_dev_Data.Setting_Group)ViewData["All"];
+    bool IsEditor = (bool)ViewData["IsEditor"] ? true : false;
+    bool IsAdmin = (bool)ViewData["IsAdmin"] ? true : false;
+
+}
+    <head>
+        <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+        <script src="~/Scripts/jquery.validate.js"></script>
+    </head>
+<body>
+    <h3>Editace @Model.Column_1 - @Model.Column_2</h3>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <h4>@Html.ValidationSummary(true, "", new { @class = "text-danger" })</h4>
+
+        <fieldset>
+            @Html.HiddenFor(model => model.Id)
+            @Html.HiddenFor(model => model.Column_2)
+            @Html.HiddenFor(model => model.Column_3)
+            @Html.HiddenFor(model => model.Column_4)
+            @Html.HiddenFor(model => model.Column_7)
+            @Html.HiddenFor(model => model.Color_6)
+            @Html.HiddenFor(model => model.RowVersion)
+            <div>
+                <table>
+                    <tr>
+                        <th>
+                            <table width="550">
+                                <tr>
+                                    <th>
+                                        @SettingsList.Name_Column_1:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Column_1, new { htmlAttributes = new { @class = "form-control" }, style = "width: 1000px; height:30px;" })
+
+                                        @Html.ValidationMessageFor(model => model.Column_1, "", new { @class = "text-danger" })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        @SettingsList.Name_Column_2:
+                                    </th>
+                                    <td>
+                                        <div style="margin-top:4px">
+                                            @Model.Column_2
+                                        </div>
+                                    </td>
+                                </tr>
+                                @if (((AllRole.Column_3_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_3_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_3_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            @SettingsList.Name_Column_3:
+                                        </th>
+                                        <td>
+                                            <div style="margin-top:4px">
+                                                @Model.Column_3
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_4_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_4_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_4_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            @SettingsList.Name_Column_4:
+                                        </th>
+                                        <td>
+                                            <div style="margin-top:4px">
+                                                @Model.Column_4
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </th>
+                        <td>
+                            <table width="250">
+                                @if (((AllRole.Column_7_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_7_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_7_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_7:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <div style="margin-bottom:4px">
+                                                @Model.Column_7
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_8_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_8_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_8_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_8:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_8, new { htmlAttributes = new { @class = "form-control" }, style = "width: 200px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_8, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_9_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_9_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_9_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_9:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_9, new { htmlAttributes = new { @class = "form-control" }, style = "width: 200px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_9, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </td>
+                        <td>
+                            <table width="300">
+                                @if (((AllRole.Column_5_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_5_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_5_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_5:
+                                                <div>
+                                                    <input type="button" onclick="Color_1_orange()" style="background-color:#E9AF24; border-color:yellow; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_1_yelow()" style="background-color:#FBF04D; border-color:lightyellow; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_1_lightblue()" style="background-color:#83B1E7; border-color:lightblue; height:15px; width:20px" />
+                                                </div>
+                                                @Html.TextBoxFor(model => Model.Color_1, new { @id = "Column_5_set_color", @class = "form-control", @Value = Model.Color_1, Style = "width: 70px; height:30px; border:none; padding:0px 0px;", type = "color" })
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_5, new { htmlAttributes = new { @class = "form-control" }, style = "width: 200px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_5, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_6_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_6_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_6_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_6:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_6, new { htmlAttributes = new { @class = "form-control" }, style = "width: 200px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_6, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_10_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_10_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_10_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_10:
+                                                <div>
+                                                    <input type="button" onclick="Color_2_orange()" style="background-color:#E9AF24; border-color:lightyellow; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_2_red()" style="background-color:#FF0000; border-color:lightpink; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_2_lightblue()" style="background-color:#83B1E7; border-color:lightblue; height:15px; width:20px" />
+                                                </div>
+                                                @Html.TextBoxFor(model => Model.Color_2, new {@id = "Column_10_set_color", @class = "form-control", @Value = Model.Color_2, Style = "width: 70px; height:30px; border:none; padding:0px 0px;", type = "color" })
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_10, new { htmlAttributes = new { @class = "form-control" }, style = "width: 200px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_10, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <hr />
+                <table>
+                    <tr>
+                        <td>
+                            <table width="400">
+                                @if (((AllRole.Column_11_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_11_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_11_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_11:
+                                                <div>
+                                                    <input type="button" onclick="Color_3_orange()" style="background-color:#E9AF24; border-color:yellow; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_3_red()" style="background-color:#FF0000; border-color:lightpink; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_3_darkgreen()" style="background-color:#24914E; border-color:forestgreen; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_3_lightgreen()" style="background-color:#6CC167; border-color:yellowgreen; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_3_gray()" style="background-color:#A2A2A2; border-color:lightgray; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_3_lightblue()" style="background-color:#83B1E7; border-color:lightblue; height:15px; width:20px" />
+                                                </div>
+                                                @Html.TextBoxFor(model => Model.Color_3, new {@id = "Column_11_set_color",  @class = "form-control", @Value = Model.Color_3, Style = "width: 90px; height:30px; border:none; padding:0px 0px;", type = "color" })
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.TextAreaFor(model => model.Column_11, new { htmlAttributes = new { @class = "form-control" }, style = "width: 280px; height:165px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_11, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_12_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_12_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_12_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_12:
+                                                <div>
+                                                   <input type="button" onclick="Color_4_orange()" style="background-color:#E9AF24; border-color:yellow; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_4_red()" style="background-color:#FF0000; border-color:lightpink; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_4_darkgreen()" style="background-color:#24914E; border-color:forestgreen; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_4_lightgreen()" style="background-color:#6CC167; border-color:yellowgreen; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_4_gray()" style="background-color:#A2A2A2; border-color:lightgray; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_4_lightblue()" style="background-color:#83B1E7; border-color:lightblue; height:15px; width:20px" />
+                                                </div>
+                                                @Html.TextBoxFor(model => Model.Color_4, new { @id = "Column_12_set_color", @class = "form-control", @Value = Model.Color_4, Style = "width: 90px; height:30px; border:none; padding:0px 0px;", type = "color" })
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.TextAreaFor(model => model.Column_12, new { htmlAttributes = new { @class = "form-control" }, style = "width: 280px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_12, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </td>
+                        <td>
+                            <table width="300">
+                                @if (((AllRole.Column_13_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_13_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_13_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_13:
+                                                <div>
+                                                    <input type="button" onclick="Color_5_orange()" style="background-color:#E9AF24; border-color:yellow; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_5_red()" style="background-color:#FF0000; border-color:lightpink; height:15px; width:20px" />
+                                                    <input type="button" onclick="Color_5_lightblue()" style="background-color:#83B1E7; border-color:lightblue; height:15px; width:20px" />
+                                                </div>
+                                                @Html.TextBoxFor(model => Model.Color_5, new { @id = "Column_13_set_color", @class = "form-control", @Value = Model.Color_5, Style = "width: 70px; height:30px; border:none; padding:0px 0px;", type = "color" })
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.TextAreaFor(model => model.Column_13, new { htmlAttributes = new { @class = "form-control" }, style = "width: 300px; height:200px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_13, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </td>
+                        <td>
+                            <table width="400">
+                                @if (((AllRole.Column_14_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_14_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_14_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_14:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_14, new { htmlAttributes = new { @class = "form-control" }, style = "width: 200px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_14, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_15_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_15_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_15_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_15:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_15, new { htmlAttributes = new { @class = "form-control" }, style = "width: 200px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_15, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_16_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_16_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_16_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_16:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_16, new { htmlAttributes = new { @class = "form-control" }, style = "width: 200px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_16, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_17_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_17_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_17_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_17:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_17, new { htmlAttributes = new { @class = "form-control" }, style = "width: 200px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_17, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_18_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_18_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_18_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_18:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_18, new { htmlAttributes = new { @class = "form-control" }, style = "width: 200px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_18, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <hr />
+                <table>
+                    <tr>
+                        <td>
+                            <table width="450">
+                                @if (((AllRole.Column_19_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_19_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_19_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_19:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_19, new { htmlAttributes = new { @class = "form-control" }, style = "width: 300px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_19, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_20_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_20_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_20_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_20:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_20, new { htmlAttributes = new { @class = "form-control" }, style = "width: 300px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_20, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_21_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_21_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_21_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_21:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_21, new { htmlAttributes = new { @class = "form-control" }, style = "width: 300px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_21, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_22_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_22_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_22_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_22:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_22, new { htmlAttributes = new { @class = "form-control" }, style = "width: 300px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_22, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </td>
+                        <td>
+                            <table width="400">
+                                @if (((AllRole.Column_23_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_23_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_23_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_23:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_23, new { htmlAttributes = new { @class = "form-control" }, style = "width: 300px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_23, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_24_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_24_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_24_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_24:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_24, new { htmlAttributes = new { @class = "form-control" }, style = "width: 300px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_24, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_25_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_25_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_25_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_25:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_25, new { htmlAttributes = new { @class = "form-control" }, style = "width: 300px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_25, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_26_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_26_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_26_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_26:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_26, new { htmlAttributes = new { @class = "form-control" }, style = "width: 300px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_26, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </td>
+                        <td>
+                            <table width="300">
+                                @if (((AllRole.Column_27_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_27_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_27_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_27:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_27, new { htmlAttributes = new { @class = "form-control" }, style = "width: 300px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_27, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_28_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_28_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_28_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_28:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_28, new { htmlAttributes = new { @class = "form-control" }, style = "width: 300px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_28, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_29_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_29_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_29_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_29:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_29, new { htmlAttributes = new { @class = "form-control" }, style = "width: 300px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_29, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                                @if (((AllRole.Column_30_Show) == true) ||
+                                    (IsEditor && (EditorRole.Column_30_Show) == true) ||
+                                    (IsAdmin && (AdminRole.Column_30_Show) == true)
+                                    )
+                                {
+                                    <tr>
+                                        <th>
+                                            <div style="margin-left:10px; margin-right:10px">
+                                                @SettingsList.Name_Column_30:
+                                            </div>
+                                        </th>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_30, new { htmlAttributes = new { @class = "form-control" }, style = "width: 300px; height:30px;" })
+
+                                            @Html.ValidationMessageFor(model => model.Column_30, "", new { @class = "text-danger" })
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <p>
+                <table>
+                    <tr>
+                        <td style="width:100px">
+                            @Html.ActionLink("Zpět", "WP", "WP")
+                        </td>
+                        <td style="width:150px">
+                            @if (IsAdmin || IsEditor)
+                            {
+                                <button type="submit" name="save" value="Save" style="background-color:mediumseagreen; border-color:lightgreen; height:35px; width:50px"><B>Ulož</B></button>
+                            }
+                        </td>
+                        <td style="width:200px">
+                            @if (IsAdmin)
+                            {
+                                <button onclick="location.href='@Url.Action("Add", "Archiv", new { id = Model.Id })';return false;" style="background-color:yellow; border-color: lightyellow; height:35px; width:100px"><B>Archivace</B></button>
+                            }
+                        </td>
+                        <td style="width:100px">
+                            @if (IsAdmin)
+                            {
+                                <button onclick="location.href='@Url.Action("Delete", "WP", new { id = Model.Id })';return false;" style="background-color:red; border-color:lightpink; height:35px; width:120px"><B>Smazat záznam</B></button>
+                            }
+                        </td>
+                    </tr>
+                </table>
+            </p>
+
+        </fieldset>
+    }
+</body>
+
+<script type="text/javascript">
+
+    function Color_1_orange() {
+        $("#Column_5_set_color").val ("#E9AF24")
+        return false;
+    }
+
+     function Color_1_yelow() {
+        $("#Column_5_set_color").val ("#FBF04D")
+        return false;
+    }
+    
+    function Color_1_lightblue() {
+        $("#Column_5_set_color").val ("#83B1E7")
+        return false;
+    }
+
+    function Color_2_orange() {
+        $("#Column_10_set_color").val ("#E9AF24")
+        return false;
+    }
+
+     function Color_2_red() {
+        $("#Column_10_set_color").val ("#FF0000")
+        return false;
+    }
+    
+    function Color_2_lightblue() {
+        $("#Column_10_set_color").val ("#83B1E7")
+        return false;
+    }
+
+     function Color_3_red() {
+        $("#Column_11_set_color").val ("#FF0000")
+        return false;
+    }
+
+    function Color_3_orange() {
+        $("#Column_11_set_color").val ("#E9AF24")
+        return false;
+    }
+
+    function Color_3_lightgreen() {
+        $("#Column_11_set_color").val ("#6CC167")
+        return false;
+    }
+
+     function Color_3_darkgreen() {
+        $("#Column_11_set_color").val ("#24914E")
+        return false;
+    }
+
+    function Color_3_gray() {
+        $("#Column_11_set_color").val ("#A2A2A2")
+        return false;
+    }
+    
+    function Color_3_lightblue() {
+        $("#Column_11_set_color").val ("#83B1E7")
+        return false;
+    }
+
+     function Color_4_red() {
+        $("#Column_12_set_color").val ("#FF0000")
+        return false;
+    }
+
+    function Color_4_orange() {
+        $("#Column_12_set_color").val ("#E9AF24")
+        return false;
+    }
+
+    function Color_4_lightgreen() {
+        $("#Column_12_set_color").val ("#6CC167")
+        return false;
+    }
+
+     function Color_4_darkgreen() {
+        $("#Column_12_set_color").val ("#24914E")
+        return false;
+    }
+
+    function Color_4_gray() {
+        $("#Column_12_set_color").val ("#A2A2A2")
+        return false;
+    }
+    
+    function Color_4_lightblue() {
+        $("#Column_12_set_color").val ("#83B1E7")
+        return false;
+    }
+
+    function Color_5_orange() {
+        $("#Column_13_set_color").val ("#E9AF24")
+        return false;
+    }
+
+     function Color_5_red() {
+        $("#Column_13_set_color").val ("#FF0000")
+        return false;
+    }
+    
+    function Color_5_lightblue() {
+        $("#Column_13_set_color").val ("#83B1E7")
+        return false;
+    }
+</script>
+

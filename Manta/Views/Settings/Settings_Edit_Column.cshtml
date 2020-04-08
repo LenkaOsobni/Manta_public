@@ -1,0 +1,308 @@
+﻿@model Manta_dev_Data.Settings_Name_Columns
+@{
+    ViewBag.Title = "Setting";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <link href="~/css/myTheme.css" rel="stylesheet" />
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.Name_Column_1)
+        @Html.HiddenFor(model => model.Name_Column_2)
+
+        <fieldset>
+            <h3>Nastavení aktuální release</h3>
+            <table>
+                <tr>
+                    <th>
+                        Aktuální release:
+                    </th>
+                    <td>
+                        @Html.EditorFor(model => model.Current_Release, new { htmlAttributes = new { @class = "form-control" } })
+                    </td>
+                </tr>
+            </table>
+
+            <h3>Nastavení sloupců</h3>
+
+            <div class="form-group">
+                <table>
+                    <tr>
+                        <td>
+                            <table class="table_Name_Column">
+                                <tr>
+                                    <th>
+                                        Sloupec 1:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_1, new { htmlAttributes = new { @class = "form-control", disabled = true } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 2:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_2, new { htmlAttributes = new { @class = "form-control", disabled = true } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 3:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_3, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 4:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_4, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 5:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_5, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 6:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_6, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 7:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_7, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 8:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_8, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 9:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_9, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 10:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_10, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="table_Name_Column">
+                                <tr>
+                                    <th>
+                                        Sloupec 11:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_11, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 12:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_12, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 13:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_13, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 14:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_14, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 15:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_15, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 16:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_16, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 17:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_17, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 18:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_18, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 19:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_19, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 20:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_20, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="table_Name_Column">
+
+                                <tr>
+                                    <th>
+                                        Sloupec 21:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_21, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 22:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_22, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 23:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_23, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 24:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_24, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 25:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_25, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 26:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_26, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 27:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_27, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 28:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_28, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 29:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_29, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Sloupec 30:
+                                    </th>
+                                    <td>
+                                        @Html.EditorFor(model => model.Name_Column_30, new { htmlAttributes = new { @class = "form-control" } })
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button type="submit" name="save" value="Save" style="background-color:mediumseagreen; border-color:lightgreen; height:35px; width:50px"><B>Ulož</B></button>
+
+                </div>
+            </div>
+
+        </fieldset>
+    }
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+</body>
+</html>

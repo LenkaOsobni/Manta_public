@@ -1,0 +1,262 @@
+﻿.WP_div {
+    width: 100em;
+    max-height: 45em;
+    overflow: scroll;
+    position: relative;
+    left: -5em;
+}
+
+.WP_table thead tr th,
+.WP_table thead tr td {
+    background-color: #AAF4B5;
+    color: #121517;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.WP_table {
+    position: relative;
+}
+
+.WP_td {
+    padding: 0.25em;
+}
+
+.WP_td_INT {
+    padding: 0.25em;
+    min-width: 150px;
+}
+
+.WP_td_UAT {
+    padding: 0.25em;
+    min-width: 150px;
+}
+
+.WP_td_POZ {
+    padding: 0.25em;
+    min-width: 300px;
+}
+
+.WP_table tbody tr td {
+    font-size: 11px;
+    outline: 1px auto gray;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.WP_th {
+    position: sticky;
+    top: 0;
+    color: #FFF;
+    text-align: center;
+    outline: 2px solid gray;
+    outline-offset: -1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+    .WP_th:first-child {
+        width: 30px;
+        left: 1px;
+        z-index: 1;
+    }
+
+    .WP_th:nth-child(2) {
+        min-width: 75px;
+        left: 51px;
+        z-index: 2;
+    }
+
+    .WP_th:nth-child(3) {
+        max-width: 50px;
+        left: 126px;
+        z-index: 2;
+    }
+
+.WP_body_th {
+    position: sticky;
+    left: 0;
+    background: #9eb5f5;
+    font-size: 11px;
+    font-weight: normal;
+    outline: 2px solid gray;
+    outline-offset: -1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+    .WP_th:first-child {
+        width: 30px;
+        left: 1px;
+        z-index: 1;
+    }
+    .WP_body_th:nth-child(2) {
+        position: sticky;
+        width: 75px;
+        left: 51px;
+        z-index: 1;
+    }
+
+    .WP_body_th:nth-child(3) {
+        position: sticky;
+        max-width: 170px;
+        left: 126px;
+        z-index: 1;
+    }
+
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+.Archiv_div {
+    max-width: 100em;
+    max-height: 45em;
+    overflow: scroll;
+    position: relative;
+}
+
+.Archiv_table thead tr th,
+.Archiv_table thead tr td {
+    background-color: #c176fb;
+    color: #121517;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.Archiv_table {
+    position: relative;
+}
+
+.Archiv_td {
+    padding: 0.25em;
+}
+
+.Archiv_td_300 {
+    padding: 0.25em;
+    min-width: 300px;
+}
+
+.Archiv_table tbody tr td {
+    font-size: 11px;
+    outline: 1px auto gray;
+}
+
+.Archiv_th {
+    position: sticky;
+    top: 0;
+    color: #FFF;
+    text-align: center;
+    outline: 2px solid gray;
+    outline-offset: -1px;
+}
+
+    .Archiv_th:nth-child(1) {
+        min-width: 60px;
+        left: 1px;
+        z-index: 2;
+    }
+
+    .Archiv_th:nth-child(2) {
+        min-width: 70px;
+        left: 61px;
+        z-index: 2;
+    }
+
+.Archiv_body_th {
+    position: sticky;
+    left: 0;
+    background: #9eb5f5;
+    font-size: 11px;
+    font-weight: normal;
+    outline: 2px solid gray;
+    outline-offset: -1px;
+}
+
+    .Archiv_body_th:nth-child(1) {
+        min-width: 60px;
+        position: sticky;
+        left: 1px;
+        z-index: 1;
+    }
+
+    .Archiv_body_th:nth-child(2) {
+        min-width: 70px;
+        position: sticky;
+        left: 61px;
+        z-index: 1;
+    }
+
+/*-----------------------------------------------------------------------------------------------------*/
+.table_Edit {
+    border: solid;
+    margin: 5px;
+    font-weight: bold;
+}
+
+    .table_Edit thead tr th {
+        border: groove;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: antiquewhite;
+    }
+
+
+    .table_Edit tbody tr td {
+        font-size: 20px;
+        outline: 1px auto gray;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+/*-----------------------------------------------------------------------------------------------------*/
+
+.table_Name_Column {
+    margin: 20px;
+}
+
+    .table_Name_Column tr td {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+/*-----------------------------------------------------------------------------------------------------*/
+
+.table_Show_Autor thead tr th {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.table_Show_Autor thead tr td {
+    font-weight: bold;
+    padding: 10px;
+    text-align: end;
+}
+
+.table_Show_Autor tbody tr td {
+    margin: 50px;
+    text-align: center;
+}
+
+.table_Show_Autor tfoot tr th {
+    font-size: 20px;
+    text-align: center;
+}
+
+.table_Show_Autor tbody tr td:first-child {
+    text-align: end;
+}
+/*-----------------------------------------------------------------------------------------------------*/
+
+.Filter_All {
+    min-width: 55px;
+}
+
+.table_Filter tr td select {
+    min-width: 900px;
+}
+
+.table_Filter tr th {
+    white-space: nowrap;
+    padding-right: 10px;
+}

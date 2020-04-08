@@ -1,0 +1,1484 @@
+﻿@model Manta_dev_ViewModel.Setting_Column_Name_ViewModel
+@{
+    ViewBag.Title = "Settings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <link href="~/css/myTheme.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Nastavení</h1>
+
+    <div>
+        <h3>Názvy sloupců</h3>
+        <hr />
+        <table>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Release:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Current_Release)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 1:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_1)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 2:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_2)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 3:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_3)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 4:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_4)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 5:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_5)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 6:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_6)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 7:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_7)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 8:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_8)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 9:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_9)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 10:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_10)
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 11:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_11)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 12:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_12)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 13:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_13)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 14:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_14)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 15:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_15)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 16:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_16)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 17:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_17)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 18:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_18)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 19:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_19)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 20:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_20)
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 21:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_21)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 22:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_22)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 23:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_23)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 24:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_24)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 25:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_25)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 26:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_26)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 27:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_27)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 28:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_28)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 29:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_29)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div style="margin-left:50px; margin-right:10px">
+                                    Sloupec 30:
+                                </div>
+                            </th>
+
+                            <td>
+                                @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_30)
+                            </td>
+
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="font-size: 20px; margin:10px;">
+        @if (Model.IsAdmin)
+        {
+            @Html.ActionLink("Upravit názvy sloupců a aktuální release", "Settings_Edit_Column", new { id = Model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Id })
+        }
+    </div>
+    <hr />
+
+    <h3>Oprávnění</h3>
+    <div class="form-group">
+        <table>
+            <tr>
+                <td>
+                    <table class="table_Show_Autor">
+                        <thead>
+                            <tr>
+                                <th colspan="3">
+                                    Oprávnění Managera
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Pro sloupec
+                                </td>
+                                <td>
+                                    Tabulka
+                                </td>
+                                <td>
+                                    Filter
+                                </td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_1)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_1_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_1_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_2)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_2_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_2_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_3)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_3_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_3_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_4)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_4_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_4_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_5)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_5_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_5_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_6)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_6_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_6_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_7)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_7_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_7_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_8)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_8_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_8_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_9)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_9_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_9_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_10)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_10_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_10_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_11)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_11_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_11_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_12)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_12_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_12_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_13)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_13_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_13_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_14)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_14_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_14_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_15)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_15_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_15_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_16)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_16_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_16_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_17)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_17_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_17_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_18)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_18_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_18_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_19)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_19_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_19_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_20)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_20_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_20_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_21)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_21_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_21_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_22)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_22_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_22_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_23)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_23_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_23_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_24)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_24_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_24_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_25)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_25_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_25_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_26)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_26_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_26_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_27)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_27_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_27_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_28)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_28_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_28_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_29)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_29_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_29_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_30)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Column_30_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Admin").First().Filter_Column_30_Show)
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <th colspan="3">
+                                    @if (Model.IsAdmin)
+                                    {
+                                        @Html.ActionLink("Upravit oprávnění Managera", "Settings_Edit_Autorization", new { id = Model.DataCollection_Setting_Group.Where(g => g.User_Group == "Admin").First().Id })
+                                    }
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </td>
+                <td>
+                    <table class="table_Show_Autor">
+                        <thead>
+                            <tr>
+                                <th colspan="3">
+                                    Oprávnění Editora
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Pro sloupec
+                                </td>
+                                <td>
+                                    Tabulka
+                                </td>
+                                <td>
+                                    Filter
+                                </td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_1)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_1_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_1_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_2)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_2_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_2_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_3)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_3_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_3_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_4)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_4_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_4_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_5)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_5_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_5_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_6)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_6_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_6_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_7)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_7_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_7_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_8)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_8_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_8_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_9)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_9_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_9_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_10)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_10_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_10_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_11)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_11_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_11_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_12)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_12_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_12_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_13)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_13_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_13_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_14)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_14_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_14_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_15)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_15_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_15_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_16)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_16_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_16_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_17)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_17_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_17_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_18)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_18_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_18_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_19)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_19_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_19_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_20)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_20_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_20_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_21)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_21_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_21_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_22)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_22_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_22_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_23)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_23_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_23_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_24)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_24_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_24_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_25)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_25_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_25_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_26)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_26_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_26_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_27)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_27_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_27_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_28)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_28_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_28_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_29)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_29_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_29_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_30)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Column_30_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "Editor").First().Filter_Column_30_Show)
+                                </td>
+                            </tr>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="3">
+                                    @if (Model.IsAdmin)
+                                    {
+                                        @Html.ActionLink("Upravit oprávnění Editora", "Settings_Edit_Autorization", new { id = Model.DataCollection_Setting_Group.Where(g => g.User_Group == "Editor").First().Id })
+                                    }
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </td>
+                <td>
+                    <table class="table_Show_Autor">
+                        <thead>
+                            <tr>
+                                <th colspan="3">
+                                    Oprávnění Ostatních
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Pro sloupec
+                                </td>
+                                <td>
+                                    Tabulka
+                                </td>
+                                <td>
+                                    Filter
+                                </td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_1)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_1_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_1_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_2)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_2_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_2_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_3)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_3_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_3_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_4)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_4_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_4_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_5)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_5_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_5_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_6)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_6_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_6_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_7)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_7_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_7_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_8)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_8_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_8_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_9)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_9_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_9_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_10)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_10_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_10_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_11)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_11_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_11_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_12)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_12_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_12_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_13)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_13_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_13_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_14)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_14_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_14_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_15)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_15_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_15_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_16)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_16_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_16_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_17)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_17_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_17_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_18)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_18_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_18_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_19)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_19_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_19_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_20)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_20_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_20_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_21)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_21_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_21_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_22)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_22_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_22_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_23)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_23_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_23_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_24)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_24_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_24_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_25)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_25_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_25_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_26)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_26_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_26_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_27)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_27_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_27_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_28)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_28_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_28_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_29)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_29_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_29_Show)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Name_Column.Where(w => w.User == "All").First().Name_Column_30)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Column_30_Show)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(model => model.DataCollection_Setting_Group.Where(w => w.User_Group == "All").First().Filter_Column_30_Show)
+                                </td>
+                            </tr>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="3">
+                                    @if (Model.IsAdmin)
+                                    {
+                                        @Html.ActionLink("Upravit oprávnění ostatních", "Settings_Edit_Autorization", new { id = Model.DataCollection_Setting_Group.Where(g => g.User_Group == "All").First().Id })
+                                    }
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

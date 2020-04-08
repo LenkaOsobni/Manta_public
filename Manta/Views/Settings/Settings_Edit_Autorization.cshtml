@@ -1,0 +1,418 @@
+﻿@model Manta_dev_Data.Setting_Group
+
+@{
+    ViewBag.Title = "Setting_Edit_Autorization";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var Column_Name = ViewBag.Settings;
+}
+<html>
+<head>
+    <link href="~/Content/myTheme.css" rel="stylesheet" />
+</head>
+<body>
+    @if (@Model.User_Group == "Admin")
+    {
+        <h2>Nastavení práv pro Manager</h2>
+    }
+    else
+    {
+        <h2>Nastavení práv pro @Model.User_Group</h2>
+    }
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <hr />
+            @Html.HiddenFor(model => model.Id)
+            @Html.HiddenFor(model => model.User_Group)
+            @Html.HiddenFor(model => model.Column_1_Show)
+            @Html.HiddenFor(model => model.Column_2_Show)
+
+
+            <div class="form-group">
+                <table>
+                    <tr>
+                        <td>
+                            <table class="table_Edit">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Pro sloupec
+                                        </th>
+                                        <th>
+                                            Zobraz v tabulce
+                                        </th>
+                                        <th>
+                                            Zobraz filter
+                                        </th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_1
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_1_Show, new { htmlAttributes = new { disabled = true } })
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_1_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_2
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_2_Show, new { htmlAttributes = new { disabled = true } })
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_2_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_3
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_3_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_3_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_4
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_4_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_4_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_5
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_5_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_5_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_6
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_6_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_6_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_7
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_7_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_7_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_8
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_8_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_8_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_9
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_9_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_9_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_10
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_10_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_10_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_11
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_11_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_11_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_12
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_12_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_12_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_13
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_13_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_13_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_14
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_14_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_14_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_15
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_15_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_15_Show)
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="table_Edit">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Pro sloupec
+                                        </th>
+                                        <th>
+                                            Zobraz v tabulce
+                                        </th>
+                                        <th>
+                                            Zobraz filter
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_16
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_16_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_16_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_17
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_17_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_17_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_18
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_18_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_18_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_19
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_19_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_19_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_20
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_20_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_20_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_21
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_21_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_21_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_22
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_22_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_22_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_23
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_23_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_23_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_24
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_24_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_24_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_25
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_25_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_25_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_26
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_26_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_26_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_27
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_27_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_27_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_28
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_28_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_28_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_29
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_29_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_29_Show)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Column_Name.Name_Column_30
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Column_30_Show)
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(model => model.Filter_Column_30_Show)
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" name="save" value="Save" style="background-color:mediumseagreen; border-color:lightgreen; height:35px; width:50px"><B>Ulož</B></button>
+            </div>
+        </div>
+    }
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</body>
+</html>

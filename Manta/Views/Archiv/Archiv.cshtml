@@ -1,0 +1,1130 @@
+﻿@using Manta_dev_ViewModel
+@using PagedList;
+@using PagedList.Mvc;
+@model Archiv_ViewModel
+@{
+    ViewBag.Title = "Archiv";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <link href="~/Content/myTheme.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="~/Scripts/sort.js"></script>
+
+
+</head>
+<body>
+    <table>
+        <tr>
+            <th width="150px">
+                <h1>Archiv</h1>
+            </th>
+            <td>
+                <p></p>
+                @using (Html.BeginForm("Archiv", "Archiv", FormMethod.Get))
+                {
+                    <table class="table_CheckBox">
+                        <tr>
+                            <td>
+                                <table>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_1_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_1_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_1_Show) == true)
+)
+                                        {
+                                            <th>
+                                                <div style="margin-left:20px; margin-right:10px">
+                                                    @Html.CheckBox("c1ch")
+                                                </div>
+                                            </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_1
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_2_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_2_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_2_Show) == true)
+)
+                                        {
+                                            <th>
+                                                <div style="margin-left:20px; margin-right:10px">
+                                                    @Html.CheckBox("c2ch")
+                                                </div>
+                                            </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_2
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_3_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_3_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_3_Show) == true)
+)
+                                        {
+                                            <th>
+                                                <div style="margin-left:20px; margin-right:10px">
+                                                    @Html.CheckBox("c3ch")
+                                                </div>
+                                            </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_3
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_4_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_4_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_4_Show) == true)
+)
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c4ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_4
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_5_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_5_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_5_Show) == true)
+)
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c5ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_5
+                                            </td>
+                                        }
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_6_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_6_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_6_Show) == true)
+)
+                                        {
+                                            <th>
+                                                <div style="margin-left:20px; margin-right:10px">
+                                                    @Html.CheckBox("c6ch")
+                                                </div>
+                                            </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_6
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_7_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_7_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_7_Show) == true)
+)
+                                        {
+                                            <th>
+                                                <div style="margin-left:20px; margin-right:10px">
+                                                    @Html.CheckBox("c7ch")
+                                                </div>
+                                            </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_7
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_8_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_8_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_8_Show) == true)
+)
+                                        {
+                                        <th>
+                                            
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c8ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_8
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_9_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_9_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_9_Show) == true)
+)
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c9ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_9
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_10_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_10_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_10_Show) == true)
+)
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c10ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_10
+                                            </td>
+                                        }
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_11_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_11_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_11_Show) == true)
+                                                                                                                                        )
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c11ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_11
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_12_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_12_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_12_Show) == true)
+                                                                                                                                        )
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c12ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_12
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_13_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_13_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_13_Show) == true)
+                                                                                                                )
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c13ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_13
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_14_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_14_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_14_Show) == true)
+                                                                                        )
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c14ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_14
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_15_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_15_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_15_Show) == true)
+                                                                )
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c15ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_15
+                                            </td>
+                                        }
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_16_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_16_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_16_Show) == true)
+                                                                                                                                        )
+                                        {
+                                            <th>
+                                                <div style="margin-left:20px; margin-right:10px">
+                                                    @Html.CheckBox("c16ch")
+                                                </div>
+                                            </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_16
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_17_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_17_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_17_Show) == true)
+                                                                                                                                        )
+                                        {
+                                            <th>
+                                                <div style="margin-left:20px; margin-right:10px">
+                                                    @Html.CheckBox("c17ch")
+                                                </div>
+                                            </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_17
+
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_18_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_18_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_18_Show) == true)
+                                                                                                                )
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c18ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_18
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_19_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_19_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_19_Show) == true)
+                                                                                        )
+                                        {
+                                        <th>
+                                            
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c19ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_19
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_20_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_20_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_20_Show) == true)
+                                                                )
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c20ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_20
+                                            </td>
+                                        }
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_21_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_21_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_21_Show) == true)
+                                                                                                                )
+                                        {
+                                            <th>
+                                                <div style="margin-left:20px; margin-right:10px">
+                                                    @Html.CheckBox("c21ch")
+                                                </div>
+                                            </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_21
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_22_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_22_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_22_Show) == true)
+                                                                                                                )
+                                        {
+                                            <th>
+                                                <div style="margin-left:20px; margin-right:10px">
+                                                    @Html.CheckBox("c22ch")
+                                                </div>
+                                            </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_22
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_23_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_23_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_23_Show) == true)
+                                                                                        )
+                                        {
+                                            <th>
+                                                <div style="margin-left:20px; margin-right:10px">
+                                                    @Html.CheckBox("c23ch")
+                                                </div>
+                                            </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_23
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_24_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_24_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_24_Show) == true)
+                                                                )
+                                        {
+                                            <th>
+                                                <div style="margin-left:20px; margin-right:10px">
+                                                    @Html.CheckBox("c24ch")
+                                                </div>
+                                            </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_24
+
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_25_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_25_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_25_Show) == true)
+                                        )
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c25ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_25
+                                            </td>
+                                        }
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_26_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_26_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_26_Show) == true)
+                                                                                        )
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c26ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_26
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_27_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_27_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_27_Show) == true)
+                                                                                        )
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c27ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_27
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_28_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_28_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_28_Show) == true)
+                                                                )
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c28ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_28
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_29_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_29_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_29_Show) == true)
+                                        )
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c29ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_29
+                                            </td>
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_30_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_30_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_30_Show) == true)
+)
+                                        {
+                                        <th>
+                                            <div style="margin-left:20px; margin-right:10px">
+                                                @Html.CheckBox("c30ch")
+                                            </div>
+                                        </th>
+                                            <td>
+                                                @Model.DataCollection_Settings_Name_Column.First().Name_Column_30
+                                            </td>
+                                        }
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th style="width:600px"></th>
+                            <td>
+                                <div style="margin-left:20px; margin-right:10px">
+                                    @Html.TextBox("searching")
+                                    <text> Vše </text> @Html.CheckBox("all")
+                                    <input type="submit" value="Hledej" formaction="@Url.Action("Archiv")" formmethod="get" style="background-color:lightgray; border-color:whitesmoke; height:25px; font-weight:bold" />
+                                    <input type="submit" value="Export" formaction="@Url.Action("Export")" formmethod="get" style="background-color:lightgray; border-color:whitesmoke; height:25px; font-weight:bold" />
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                }
+            </td>
+        </tr>
+    </table>
+    <br />
+
+    <div class="Archiv_div">
+        <table class="Archiv_table">
+            <thead class="Archiv_thread">
+                <tr>
+                    <th class="Archiv_th" id="2_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_1</th>
+                    <th class="Archiv_th" id="3_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_2</th>
+
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_3_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_3_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_3_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="4_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_3</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_4_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_4_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_4_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="5_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_4</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_5_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_5_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_5_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="6_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_5</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_6_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_6_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_6_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="7_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_6</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_7_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_7_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_7_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="8_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_7</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_8_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_8_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_8_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="9_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_8</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_9_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_9_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_9_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="10_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_9</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_10_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_10_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_10_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="11_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_10</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_11_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_11_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_11_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="12_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_11</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_12_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_12_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_12_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="13_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_12</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_13_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_13_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_13_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="14_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_13</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_14_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_14_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_14_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="15_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_14</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_15_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_15_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_15_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="16_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_15</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_16_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_16_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_16_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="17_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_16</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_17_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_17_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_17_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="18_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_17</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_18_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_18_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_18_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="19_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_18</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_19_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_19_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_19_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="20_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_19</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_20_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_20_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_20_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="21_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_20</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_21_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_21_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_21_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="22_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_21</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_22_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_22_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_22_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="23_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_22</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_23_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_23_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_23_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="24_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_23</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_24_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_24_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_24_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="25_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_24</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_25_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_25_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_25_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="26_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_25</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_26_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_26_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_26_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="27_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_26</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_27_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_27_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_27_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="28_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_27</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_28_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_28_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_28_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="29_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_28</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_29_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_29_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_29_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="30_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_29</th>
+                    }
+                    @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_30_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_30_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_30_Show) == true)
+)
+                    {
+                        <th class="Archiv_th" id="31_header">@Model.DataCollection_Settings_Name_Column.First().Name_Column_30</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.DataCollection_Archiv)
+                {
+                    <tr>
+                        <th class="Archiv_body_th">
+                            <span style="white-space: pre-line">
+                                @Convert.ToString(item.Column_1)
+                            </span>
+                        </th>
+                        <th class="Archiv_body_th">
+                            <span style="white-space: pre-line">
+                                @Convert.ToString(item.Column_2)
+                            </span>
+                        </th>
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_3_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_3_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_3_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_3)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_4_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_4_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_4_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_4)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_5_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_5_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_5_Show) == true)
+)
+                        {
+                            <td class="Archiv_td" style="background-color:@Convert.ToString(item.Color_1)">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_5)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_6_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_6_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_6_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_6)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_7_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_7_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_7_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_7)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_8_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_8_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_8_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_8)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_9_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_9_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_9_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_9)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_10_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_10_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_10_Show) == true)
+)
+                        {
+                            <td class="Archiv_td" style="background-color:@Convert.ToString(item.Color_2)">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_10)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_11_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_11_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_11_Show) == true)
+)
+                        {
+                            <td class="Archiv_td_300" style="background-color:@Convert.ToString(item.Color_3)">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_11)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_12_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_12_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_12_Show) == true)
+)
+                        {
+                            <td class="Archiv_td_300" style="background-color:@Convert.ToString(item.Color_4)">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_12)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_13_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_13_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_13_Show) == true)
+)
+                        {
+                            <td class="Archiv_td_300" style="background-color:@Convert.ToString(item.Color_5)">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_13)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_14_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_14_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_14_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_14)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_15_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_15_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_15_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_15)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_16_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_16_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_16_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_16)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_17_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_17_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_17_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_17)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_18_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_18_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_18_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_18)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_19_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_19_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_19_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_19)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_20_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_20_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_20_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_20)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_21_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_21_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_21_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_21)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_22_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_22_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_22_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_22)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_23_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_23_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_23_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_23)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_24_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_24_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_24_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_24)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_25_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_25_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_25_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_25)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_26_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_26_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_26_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_26)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_27_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_27_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_27_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_27)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_28_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_28_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_28_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_28)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_29_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_29_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_29_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_29)
+                                </span>
+                            </td>
+                        }
+                        @if (((Model.DataCollection_Settings_Group.Where(r => r.User_Group == "All").FirstOrDefault().Column_30_Show) == true) ||
+(Model.IsAdmin && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Admin").FirstOrDefault().Column_30_Show) == true) ||
+(Model.IsEditor && (Model.DataCollection_Settings_Group.Where(r => r.User_Group == "Editor").FirstOrDefault().Column_30_Show) == true)
+)
+                        {
+                            <td class="Archiv_td">
+                                <span style="white-space: pre-line">
+                                    @Convert.ToString(item.Column_30)
+                                </span>
+                            </td>
+                        }
+                    </tr>
+                }
+        </table>
+    </div>
+    
+    @Html.PagedListPager(Model.DataCollection_Archiv, page => Url.Action("Archiv", new {
+    c1ch = Request.QueryString["c1ch"] != null ? (Request.QueryString["c1ch"].Contains("true") ? true : false) : false ,
+    c2ch = Request.QueryString["c2ch"] != null ? (Request.QueryString["c2ch"].Contains("true") ? true : false) : false ,
+    c3ch = Request.QueryString["c3ch"] != null ? (Request.QueryString["c3ch"].Contains("true") ? true : false) : false ,
+    c4ch = Request.QueryString["c4ch"] != null ? (Request.QueryString["c4ch"].Contains("true") ? true : false) : false ,
+    c5ch = Request.QueryString["c5ch"] != null ? (Request.QueryString["c5ch"].Contains("true") ? true : false) : false ,
+    c6ch = Request.QueryString["c6ch"] != null ? (Request.QueryString["c6ch"].Contains("true") ? true : false) : false ,
+    c7ch = Request.QueryString["c7ch"] != null ? (Request.QueryString["c7ch"].Contains("true") ? true : false) : false ,
+    c8ch = Request.QueryString["c8ch"] != null ? (Request.QueryString["c8ch"].Contains("true") ? true : false) : false ,
+    c9ch = Request.QueryString["c9ch"] != null ? (Request.QueryString["c9ch"].Contains("true") ? true : false) : false ,
+    c10ch = Request.QueryString["c10ch"] != null ? (Request.QueryString["c10ch"].Contains("true") ? true : false) : false ,
+    c11ch = Request.QueryString["c11ch"] != null ? (Request.QueryString["c11ch"].Contains("true") ? true : false) : false ,
+    c12ch = Request.QueryString["c12ch"] != null ? (Request.QueryString["c12ch"].Contains("true") ? true : false) : false ,
+    c13ch = Request.QueryString["c13ch"] != null ? (Request.QueryString["c13ch"].Contains("true") ? true : false) : false ,
+    c14ch = Request.QueryString["c14ch"] != null ? (Request.QueryString["c14ch"].Contains("true") ? true : false) : false ,
+    c15ch = Request.QueryString["c15ch"] != null ? (Request.QueryString["c15ch"].Contains("true") ? true : false) : false ,
+    c16ch = Request.QueryString["c16ch"] != null ? (Request.QueryString["c16ch"].Contains("true") ? true : false) : false ,
+    c17ch = Request.QueryString["c17ch"] != null ? (Request.QueryString["c17ch"].Contains("true") ? true : false) : false ,
+    c18ch = Request.QueryString["c18ch"] != null ? (Request.QueryString["c18ch"].Contains("true") ? true : false) : false ,
+    c19ch = Request.QueryString["c19ch"] != null ? (Request.QueryString["c19ch"].Contains("true") ? true : false) : false ,
+    c20ch = Request.QueryString["c20ch"] != null ? (Request.QueryString["c20ch"].Contains("true") ? true : false) : false ,
+    c21ch = Request.QueryString["c21ch"] != null ? (Request.QueryString["c21ch"].Contains("true") ? true : false) : false ,
+    c22ch = Request.QueryString["c22ch"] != null ? (Request.QueryString["c22ch"].Contains("true") ? true : false) : false ,
+    c23ch = Request.QueryString["c23ch"] != null ? (Request.QueryString["c23ch"].Contains("true") ? true : false) : false ,
+    c24ch = Request.QueryString["c24ch"] != null ? (Request.QueryString["c24ch"].Contains("true") ? true : false) : false ,
+    c25ch = Request.QueryString["c25ch"] != null ? (Request.QueryString["c25ch"].Contains("true") ? true : false) : false ,
+    c26ch = Request.QueryString["c26ch"] != null ? (Request.QueryString["c26ch"].Contains("true") ? true : false) : false ,
+    c27ch = Request.QueryString["c27ch"] != null ? (Request.QueryString["c27ch"].Contains("true") ? true : false) : false ,
+    c28ch = Request.QueryString["c28ch"] != null ? (Request.QueryString["c28ch"].Contains("true") ? true : false) : false ,
+    c29ch = Request.QueryString["c29ch"] != null ? (Request.QueryString["c29ch"].Contains("true") ? true : false) : false ,
+    c30ch = Request.QueryString["c30ch"] != null ? (Request.QueryString["c30ch"].Contains("true") ? true : false) : false ,
+    searching = Request.QueryString["searching"],
+    all = Request.QueryString["all"] != null ? (Request.QueryString["all"].Contains("true") ? true : false) : false ,
+    page }),
+                                new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded }) 
+    
+    <div class="clear"></div>
+</body>
+</html>
+
